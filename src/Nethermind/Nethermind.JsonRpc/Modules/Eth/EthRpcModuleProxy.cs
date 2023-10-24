@@ -215,6 +215,11 @@ namespace Nethermind.JsonRpc.Modules.Eth
                 : ResultWrapper<ReceiptForRpc>.Success(receipt);
         }
 
+        public ResultWrapper<ReceiptForRpc[]> eth_getBlockReceipts(BlockParameter blockParameter)
+        {
+            throw new NotSupportedException();
+        }
+
         public ResultWrapper<BlockForRpc> eth_getUncleByBlockHashAndIndex(Keccak blockHashData, UInt256 positionIndex)
         {
             throw new NotSupportedException();
