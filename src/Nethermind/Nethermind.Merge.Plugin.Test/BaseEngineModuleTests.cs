@@ -360,8 +360,9 @@ public abstract partial class BaseEngineModuleTests
                 LogManager);
             blockProducerEnvFactory.ExecutionRequestsProcessorOverride = ExecutionRequestsProcessorOverride;
 
-            InclusionListTxSource = new InclusionListTxSource(SpecProvider.ChainId);
-            BlockProducerEnv blockProducerEnv = blockProducerEnvFactory.Create(InclusionListTxSource);
+            // InclusionListTxSource = new InclusionListTxSource(SpecProvider.ChainId);
+            // BlockProducerEnv blockProducerEnv = blockProducerEnvFactory.Create(InclusionListTxSource);
+            BlockProducerEnv blockProducerEnv = blockProducerEnvFactory.Create();
             PostMergeBlockProducer? postMergeBlockProducer = blockProducerFactory.Create(blockProducerEnv);
             PostMergeBlockProducer = postMergeBlockProducer;
             BlockImprovementContextFactory ??= new BlockImprovementContextFactory(PostMergeBlockProducer, TimeSpan.FromSeconds(MergeConfig.SecondsPerSlot));

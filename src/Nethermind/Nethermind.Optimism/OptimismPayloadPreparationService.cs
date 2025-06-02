@@ -85,7 +85,7 @@ public class OptimismPayloadPreparationService : PayloadPreparationService
                 ImprovementContext = new NoBlockImprovementContext(currentBestBlock, UInt256.Zero, startDateTime),
             };
             // ignore TryAdd failure (it can only happen if payloadId is already in the dictionary)
-            _payloadStorage.TryAdd(payloadId, payloadStore);
+            _payloadStorage.TryAdd(payloadId, payloadStore.ImprovementContext);
         }
         else
         {

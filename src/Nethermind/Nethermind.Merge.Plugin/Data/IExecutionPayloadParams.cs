@@ -72,14 +72,14 @@ public class ExecutionPayloadParams(
             }
         }
 
-        if (spec.InclusionListsEnabled)
-        {
-            if (InclusionListTransactions is null)
-            {
-                error = "Inclusion list must be set";
-                return ValidationResult.Fail;
-            }
-        }
+        // if (spec.InclusionListsEnabled)
+        // {
+        //     if (InclusionListTransactions is null)
+        //     {
+        //         error = "Inclusion list must be set";
+        //         return ValidationResult.Fail;
+        //     }
+        // }
 
         return ValidationResult.Success;
     }
